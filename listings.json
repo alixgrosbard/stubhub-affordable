@@ -1,0 +1,194 @@
+{
+  "lastUpdated": "2026-03-18T12:00:00Z",
+  "categories": [
+    {
+      "id": "sports",
+      "name": "Sports",
+      "events": [
+        {
+          "id": "nets-apr5",
+          "title": "Brooklyn Nets vs. Washington Wizards",
+          "subtitle": "Kids Day at Barclays Center",
+          "date": "2026-04-05T15:30:00",
+          "venue": "Barclays Center",
+          "borough": "Brooklyn",
+          "priceFrom": 15,
+          "stubhubUrl": "https://www.stubhub.com/brooklyn-nets-brooklyn-tickets-4-5-2026/event/159054550/",
+          "active": true
+        },
+        {
+          "id": "mets-apr25",
+          "title": "New York Mets vs. Colorado Rockies",
+          "subtitle": "Saturday afternoon at Citi Field",
+          "date": "2026-04-25T16:10:00",
+          "venue": "Citi Field",
+          "borough": "Queens",
+          "priceFrom": 15,
+          "stubhubUrl": "https://www.stubhub.com/new-york-mets-flushing-tickets-4-25-2026/event/159261003/",
+          "active": true
+        },
+        {
+          "id": "mets-apr10",
+          "title": "New York Mets vs. Oakland Athletics",
+          "subtitle": "Friday evening at Citi Field",
+          "date": "2026-04-10T19:10:00",
+          "venue": "Citi Field",
+          "borough": "Queens",
+          "priceFrom": 18,
+          "stubhubUrl": "https://www.stubhub.com/new-york-mets-flushing-tickets-4-10-2026/event/159260996/",
+          "active": true
+        },
+        {
+          "id": "yankees-apr8",
+          "title": "New York Yankees vs. Oakland Athletics",
+          "subtitle": "Midweek evening at Yankee Stadium",
+          "date": "2026-04-08T19:05:00",
+          "venue": "Yankee Stadium",
+          "borough": "Bronx",
+          "priceFrom": 25,
+          "stubhubUrl": "https://www.stubhub.com/new-york-yankees-bronx-tickets-4-8-2026/event/159257394/",
+          "active": true
+        },
+        {
+          "id": "yankees-apr3",
+          "title": "New York Yankees vs. Miami Marlins",
+          "subtitle": "2026 Home Opener",
+          "date": "2026-04-03T13:35:00",
+          "venue": "Yankee Stadium",
+          "borough": "Bronx",
+          "priceFrom": 35,
+          "stubhubUrl": "https://www.stubhub.com/new-york-yankees-bronx-tickets-4-3-2026/event/159257229/",
+          "active": true
+        },
+        {
+          "id": "knicks-apr9",
+          "title": "New York Knicks vs. Boston Celtics",
+          "subtitle": "Rivalry night at The Garden",
+          "date": "2026-04-09T19:30:00",
+          "venue": "Madison Square Garden",
+          "borough": "Manhattan",
+          "priceFrom": 75,
+          "stubhubUrl": "https://www.stubhub.com/new-york-knicks-new-york-tickets-4-9-2026/event/159055087/",
+          "active": true
+        }
+      ]
+    },
+    {
+      "id": "theatre",
+      "name": "Theatre",
+      "events": [
+        {
+          "id": "harry-potter-apr21",
+          "title": "Harry Potter and the Cursed Child",
+          "subtitle": "Broadway — The epic stage continuation",
+          "date": "2026-04-21T19:00:00",
+          "venue": "Lyric Theatre",
+          "borough": "Manhattan",
+          "priceFrom": 72,
+          "stubhubUrl": "https://www.stubhub.com/harry-potter-and-the-cursed-child-new-york-tickets-4-21-2026/event/158513814/",
+          "active": true
+        },
+        {
+          "id": "aladdin-apr11",
+          "title": "Aladdin The Musical",
+          "subtitle": "Broadway — Disney's hit with the magic carpet ride",
+          "date": "2026-04-11T14:00:00",
+          "venue": "New Amsterdam Theatre",
+          "borough": "Manhattan",
+          "priceFrom": 73,
+          "stubhubUrl": "https://www.stubhub.com/aladdin-the-musical-new-york-tickets-4-11-2026/event/159427939/",
+          "active": true
+        },
+        {
+          "id": "wicked-apr4",
+          "title": "Wicked",
+          "subtitle": "Broadway — The long-running blockbuster musical",
+          "date": "2026-04-04T19:00:00",
+          "venue": "Gershwin Theatre",
+          "borough": "Manhattan",
+          "priceFrom": 89,
+          "stubhubUrl": "https://www.stubhub.com/wicked-the-musical-new-york-tickets-4-4-2026/event/159240497/",
+          "active": true
+        }
+      ]
+    },
+    {
+      "id": "comedy",
+      "name": "Comedy",
+      "events": [
+        {
+          "id": "bell-house-apr8",
+          "title": "Bell House Stand-Up Showcase",
+          "subtitle": "Live comedy showcase in Gowanus",
+          "date": "2026-04-08T20:00:00",
+          "venue": "The Bell House",
+          "borough": "Brooklyn",
+          "priceFrom": 21,
+          "stubhubUrl": "https://www.stubhub.com/bell-house-stand-up-showcase-brooklyn-tickets-4-8-2026/event/160632666/",
+          "active": true
+        },
+        {
+          "id": "garden-laughs-apr13",
+          "title": "Garden of Laughs",
+          "subtitle": "John Oliver, Andrew Schulz, Iliza Shlesinger & more",
+          "date": "2026-04-13T20:00:00",
+          "venue": "Radio City Music Hall",
+          "borough": "Manhattan",
+          "priceFrom": 72,
+          "stubhubUrl": "https://www.stubhub.com/garden-of-laughs-new-york-city-tickets-4-13-2026/event/160465120/",
+          "active": true
+        },
+        {
+          "id": "jo-koy-apr4",
+          "title": "Jo Koy: Just Being Koy Tour",
+          "subtitle": "Live stand-up comedy",
+          "date": "2026-04-04T20:00:00",
+          "venue": "Radio City Music Hall",
+          "borough": "Manhattan",
+          "priceFrom": 96,
+          "stubhubUrl": "https://www.stubhub.com/jo-koy-new-york-city-tickets-4-4-2026/event/159980261/",
+          "active": true
+        }
+      ]
+    },
+    {
+      "id": "concerts",
+      "name": "Concerts",
+      "events": [
+        {
+          "id": "1tbsp-apr4",
+          "title": "1tbsp",
+          "subtitle": "Live at Brooklyn Steel",
+          "date": "2026-04-04T20:30:00",
+          "venue": "Brooklyn Steel",
+          "borough": "Brooklyn",
+          "priceFrom": 53,
+          "stubhubUrl": "https://www.stubhub.com/1tbsp-brooklyn-tickets-4-4-2026/event/159990353/",
+          "active": true
+        },
+        {
+          "id": "rusowsky-apr2",
+          "title": "Rusowsky",
+          "subtitle": "Live at Brooklyn Steel",
+          "date": "2026-04-02T20:00:00",
+          "venue": "Brooklyn Steel",
+          "borough": "Brooklyn",
+          "priceFrom": 57,
+          "stubhubUrl": "https://www.stubhub.com/rusowsky-brooklyn-tickets-4-2-2026/event/159989224/",
+          "active": true
+        },
+        {
+          "id": "dave-apr30",
+          "title": "Dave (Santan Dave)",
+          "subtitle": "The Boy Who Played the Harp Tour",
+          "date": "2026-04-30T19:00:00",
+          "venue": "Brooklyn Paramount",
+          "borough": "Brooklyn",
+          "priceFrom": 98,
+          "stubhubUrl": "https://www.stubhub.com/dave-santan-dave-brooklyn-tickets-4-30-2026/event/160035708/",
+          "active": true
+        }
+      ]
+    }
+  ]
+}
