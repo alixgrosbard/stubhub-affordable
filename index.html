@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Affordable Events in NYC | StubHub</title>
+<title>Live Events for Everyone | StubHub</title>
 <style>
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -41,58 +41,56 @@
   .mobile-toggle span { display: block; width: 20px; height: 2px; background: #fff; margin: 4px 0; border-radius: 2px; }
 
   /* HERO */
-  .hero { position: relative; padding: 120px 24px 80px; background: var(--dark); overflow: hidden; }
-  .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 60% 30%, rgba(134,71,253,0.25) 0%, transparent 70%), radial-gradient(ellipse 50% 70% at 20% 80%, rgba(63,29,117,0.3) 0%, transparent 60%); pointer-events: none; }
-  .hero-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-  .hero-pill { display: inline-flex; align-items: center; gap: 8px; background: rgba(134,71,253,0.15); border: 1px solid rgba(134,71,253,0.3); border-radius: 100px; padding: 6px 16px 6px 10px; margin-bottom: 20px; color: var(--purple-light); font-size: 13px; font-weight: 600; animation: fadeDown 0.7s ease both; }
+  .hero { position: relative; padding: 140px 24px 100px; background: var(--dark); overflow: hidden; text-align: center; }
+  .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 50% at 50% 20%, rgba(134,71,253,0.2) 0%, transparent 70%); pointer-events: none; }
+  .hero-inner { max-width: 800px; margin: 0 auto; position: relative; z-index: 2; }
+  .hero-pill { display: inline-flex; align-items: center; gap: 8px; background: rgba(134,71,253,0.15); border: 1px solid rgba(134,71,253,0.3); border-radius: 100px; padding: 6px 16px 6px 10px; margin-bottom: 28px; color: var(--purple-light); font-size: 13px; font-weight: 600; animation: fadeDown 0.7s ease both; }
   .hero-pill-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--purple-bright); animation: pulse 2s infinite; }
   @keyframes pulse { 0%,100%{box-shadow:0 0 0 0 rgba(134,71,253,0.4)} 50%{box-shadow:0 0 0 6px rgba(134,71,253,0)} }
-  .hero h1 { font-size: clamp(36px, 5vw, 56px); font-weight: 700; line-height: 1.1; color: var(--white); letter-spacing: -0.5px; animation: fadeUp 0.7s ease 0.1s both; }
+  .hero h1 { font-size: clamp(36px, 5.5vw, 60px); font-weight: 700; line-height: 1.08; color: var(--white); letter-spacing: -1px; animation: fadeUp 0.7s ease 0.1s both; }
   .hero h1 em { font-style: normal; color: var(--purple-bright); }
-  .hero-sub { font-size: 17px; color: rgba(255,255,255,0.55); margin-top: 16px; line-height: 1.6; max-width: 460px; animation: fadeUp 0.7s ease 0.2s both; }
-  .hero-ctas { display: flex; gap: 12px; margin-top: 32px; animation: fadeUp 0.7s ease 0.3s both; }
-  .btn-purple { display: inline-flex; align-items: center; gap: 8px; background: var(--purple-bright); color: var(--white); font-weight: 600; font-size: 15px; padding: 14px 26px; border-radius: 12px; text-decoration: none; border: none; cursor: pointer; transition: background 0.2s, transform 0.2s; }
+  .hero-sub { font-size: 19px; color: rgba(255,255,255,0.5); margin: 20px auto 0; line-height: 1.6; max-width: 560px; animation: fadeUp 0.7s ease 0.2s both; }
+  .hero-cta { margin-top: 36px; animation: fadeUp 0.7s ease 0.3s both; }
+  .btn-purple { display: inline-flex; align-items: center; gap: 8px; background: var(--purple-bright); color: var(--white); font-weight: 600; font-size: 16px; padding: 16px 32px; border-radius: 12px; text-decoration: none; border: none; cursor: pointer; transition: background 0.2s, transform 0.2s; }
   .btn-purple:hover { background: #7535eb; transform: translateY(-1px); }
-  .btn-ghost { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.08); color: var(--white); font-weight: 600; font-size: 15px; padding: 14px 26px; border-radius: 12px; text-decoration: none; border: 1px solid rgba(255,255,255,0.12); cursor: pointer; transition: background 0.2s; }
-  .btn-ghost:hover { background: rgba(255,255,255,0.14); }
 
-  /* Hero stat */
-  .hero-stat { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; padding: 44px 36px; text-align: center; animation: fadeUp 0.7s ease 0.35s both; position: relative; overflow: hidden; }
-  .hero-stat::before { content: ''; position: absolute; top: -1px; left: 25%; right: 25%; height: 2px; background: linear-gradient(90deg, transparent, var(--purple-bright), transparent); }
-  .stat-num { font-size: 100px; font-weight: 700; color: var(--white); line-height: 1; letter-spacing: -3px; }
-  .stat-num .pct { font-size: 52px; color: var(--purple-bright); vertical-align: super; margin-left: 2px; }
-  .stat-desc { font-size: 17px; color: rgba(255,255,255,0.45); margin-top: 10px; font-weight: 500; }
-  .stat-desc strong { color: var(--white); }
-  .stat-bars { display: flex; gap: 4px; margin-top: 24px; justify-content: center; }
-  .stat-bar { width: 7px; height: 36px; border-radius: 4px; background: rgba(255,255,255,0.1); }
-  .stat-bar.on { background: var(--purple-bright); box-shadow: 0 0 10px rgba(134,71,253,0.3); }
+  /* STAT STRIP */
+  .stat-strip { background: var(--dark); border-top: 1px solid rgba(255,255,255,0.06); padding: 56px 24px; }
+  .stat-strip-inner { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; text-align: center; }
+  .stat-block .stat-big { font-size: clamp(48px, 7vw, 72px); font-weight: 700; color: var(--white); line-height: 1; letter-spacing: -2px; }
+  .stat-block .stat-big span { color: var(--purple-bright); }
+  .stat-block .stat-label { font-size: 15px; color: rgba(255,255,255,0.4); margin-top: 8px; line-height: 1.5; font-weight: 500; }
+  .stat-block .stat-label strong { color: rgba(255,255,255,0.7); }
 
-  /* Updated banner */
-  .updated-banner { background: var(--purple-bg); padding: 12px 24px; text-align: center; font-size: 13px; color: var(--purple-deep); font-weight: 500; }
-  .updated-banner strong { font-weight: 700; }
+  /* MESSAGE SECTIONS */
+  .msg-section { padding: 96px 24px; }
+  .msg-section:nth-child(even) { background: var(--gray-50); }
+  .msg-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+  .msg-inner.flip { direction: rtl; }
+  .msg-inner.flip > * { direction: ltr; }
+  .msg-text { max-width: 480px; }
+  .msg-eyebrow { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--purple-bright); margin-bottom: 16px; }
+  .msg-text h2 { font-size: clamp(28px, 3.5vw, 40px); font-weight: 700; line-height: 1.15; color: var(--dark); letter-spacing: -0.5px; margin-bottom: 16px; }
+  .msg-text p { font-size: 17px; color: var(--gray-600); line-height: 1.7; margin-bottom: 12px; }
+  .msg-text p:last-of-type { margin-bottom: 0; }
+  .msg-highlight { background: var(--purple-bg); border-left: 3px solid var(--purple-bright); padding: 16px 20px; border-radius: 0 8px 8px 0; margin-top: 20px; font-size: 15px; color: var(--purple-deep); font-weight: 600; line-height: 1.5; }
 
-  /* Category sections */
-  .cat-section { padding: 72px 24px 0; max-width: 1200px; margin: 0 auto; }
-  .cat-section:last-of-type { padding-bottom: 72px; }
-  .cat-header { display: flex; align-items: center; gap: 12px; margin-bottom: 28px; }
-  .cat-icon { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; }
-  .cat-icon.sports { background: #EFF6FF; }
-  .cat-icon.theatre { background: #FEF3C7; }
-  .cat-icon.comedy { background: #FCE7F3; }
-  .cat-icon.concerts { background: #F0FDF4; }
-  .cat-title { font-size: 24px; font-weight: 700; color: var(--gray-800); }
-  .cat-count { font-size: 13px; color: var(--gray-400); font-weight: 500; margin-left: auto; }
-
-  .event-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  /* PROOF — featured events */
+  .proof { padding: 96px 24px; background: var(--white); }
+  .proof-inner { max-width: 1100px; margin: 0 auto; }
+  .proof-header { text-align: center; margin-bottom: 48px; }
+  .proof-header h2 { font-size: clamp(28px, 3.5vw, 40px); font-weight: 700; color: var(--dark); letter-spacing: -0.5px; }
+  .proof-header p { font-size: 17px; color: var(--gray-400); margin-top: 10px; }
+  .proof-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
 
   /* Event card */
   .ev-card { display: flex; flex-direction: column; border-radius: 12px; overflow: hidden; border: 1px solid var(--gray-200); background: var(--white); text-decoration: none; color: inherit; transition: transform 0.3s cubic-bezier(0.22,1,0.36,1), box-shadow 0.3s; }
   .ev-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(63,29,117,0.1), 0 4px 12px rgba(0,0,0,0.06); }
-  .ev-top { position: relative; padding: 20px 20px 16px; border-bottom: 1px solid var(--gray-100); }
-  .ev-date { display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: var(--purple-bright); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; }
-  .ev-title { font-size: 18px; font-weight: 700; color: var(--gray-800); line-height: 1.3; margin-bottom: 4px; }
+  .ev-top { position: relative; padding: 20px 20px 16px; border-bottom: 1px solid var(--gray-100); flex: 1; }
+  .ev-date { display: flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 600; color: var(--purple-bright); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; }
+  .ev-title { font-size: 17px; font-weight: 700; color: var(--gray-800); line-height: 1.3; margin-bottom: 4px; }
   .ev-subtitle { font-size: 13px; color: var(--gray-400); font-weight: 500; }
-  .ev-venue { display: flex; align-items: center; gap: 4px; font-size: 13px; color: var(--gray-600); margin-top: 10px; }
+  .ev-venue { display: flex; align-items: center; gap: 4px; font-size: 12px; color: var(--gray-600); margin-top: 10px; }
   .ev-venue svg { width: 14px; height: 14px; flex-shrink: 0; color: var(--gray-400); }
   .ev-bottom { padding: 16px 20px; display: flex; align-items: center; justify-content: space-between; margin-top: auto; }
   .ev-price { font-size: 13px; color: var(--gray-600); }
@@ -102,10 +100,28 @@
   .ev-cta svg { width: 14px; height: 14px; }
   .ev-badge { position: absolute; top: 16px; right: 16px; background: #DCFCE7; color: #166534; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 6px; text-transform: uppercase; letter-spacing: 0.3px; }
 
-  /* Trust */
-  .trust { padding: 80px 24px; background: var(--dark); margin-top: 72px; position: relative; overflow: hidden; }
+  /* PERSONA CARDS */
+  .persona-visual { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .persona-card { background: var(--white); border: 1px solid var(--gray-200); border-radius: 16px; padding: 28px 24px; transition: transform 0.3s, box-shadow 0.3s; }
+  .persona-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(63,29,117,0.08); }
+  .persona-icon { font-size: 28px; margin-bottom: 12px; }
+  .persona-card h3 { font-size: 15px; font-weight: 700; color: var(--dark); margin-bottom: 6px; line-height: 1.3; }
+  .persona-card p { font-size: 13px; color: var(--gray-600); line-height: 1.5; }
+
+  /* SELLER STORY */
+  .seller-visual { background: rgba(134,71,253,0.06); border: 1px solid rgba(134,71,253,0.12); border-radius: 20px; padding: 40px 36px; text-align: center; }
+  .seller-visual .seller-stat { font-size: clamp(56px, 7vw, 80px); font-weight: 700; color: var(--purple-deep); line-height: 1; letter-spacing: -3px; }
+  .seller-visual .seller-stat span { color: var(--purple-bright); }
+  .seller-visual .seller-desc { font-size: 15px; color: var(--gray-600); margin-top: 10px; line-height: 1.5; }
+  .seller-visual .seller-detail { display: flex; gap: 16px; margin-top: 24px; justify-content: center; }
+  .seller-visual .seller-chip { background: var(--white); border: 1px solid var(--gray-200); border-radius: 10px; padding: 14px 18px; text-align: center; flex: 1; max-width: 180px; }
+  .seller-chip .chip-num { font-size: 28px; font-weight: 700; color: var(--purple-deep); }
+  .seller-chip .chip-label { font-size: 12px; color: var(--gray-600); margin-top: 2px; }
+
+  /* TRUST */
+  .trust { padding: 80px 24px; background: var(--dark); position: relative; overflow: hidden; }
   .trust::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 60% at 50% 50%, rgba(134,71,253,0.15), transparent); pointer-events: none; }
-  .trust-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 2; text-align: center; }
+  .trust-inner { max-width: 1100px; margin: 0 auto; position: relative; z-index: 2; text-align: center; }
   .trust-heading { font-size: 32px; font-weight: 700; color: var(--white); margin-bottom: 48px; }
   .trust-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
   .trust-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 32px 24px; text-align: center; transition: background 0.3s; }
@@ -114,17 +130,11 @@
   .trust-card h3 { font-size: 17px; font-weight: 700; color: var(--white); margin-bottom: 8px; }
   .trust-card p { font-size: 14px; color: rgba(255,255,255,0.45); line-height: 1.6; }
 
-  /* FAQ */
-  .faq { padding: 80px 24px; max-width: 720px; margin: 0 auto; }
-  .faq-heading { font-size: 28px; font-weight: 700; text-align: center; margin-bottom: 40px; }
-  .faq-item { border-bottom: 1px solid var(--gray-200); }
-  .faq-btn { width: 100%; padding: 20px 0; display: flex; align-items: center; justify-content: space-between; background: none; border: none; cursor: pointer; font-family: var(--font); font-size: 15px; font-weight: 600; color: var(--gray-800); text-align: left; gap: 16px; }
-  .faq-btn:hover { color: var(--purple-bright); }
-  .faq-chev { width: 20px; height: 20px; flex-shrink: 0; transition: transform 0.3s; color: var(--gray-400); }
-  .faq-item.open .faq-chev { transform: rotate(180deg); color: var(--purple-bright); }
-  .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.22,1,0.36,1); }
-  .faq-item.open .faq-answer { max-height: 300px; }
-  .faq-answer p { padding-bottom: 20px; font-size: 14px; color: var(--gray-600); line-height: 1.7; }
+  /* CTA BANNER */
+  .cta-banner { padding: 96px 24px; text-align: center; background: var(--purple-bg); }
+  .cta-banner h2 { font-size: clamp(28px, 4vw, 44px); font-weight: 700; color: var(--dark); letter-spacing: -0.5px; line-height: 1.15; }
+  .cta-banner p { font-size: 17px; color: var(--gray-600); margin: 14px auto 0; max-width: 480px; line-height: 1.6; }
+  .cta-banner .btn-purple { margin-top: 28px; }
 
   /* Footer */
   .footer { background: var(--gray-800); padding: 48px 24px 28px; color: rgba(255,255,255,0.5); }
@@ -146,23 +156,26 @@
 
   /* Responsive */
   @media (max-width: 900px) {
-    .hero-inner { grid-template-columns: 1fr; gap: 36px; }
-    .hero-stat { max-width: 380px; margin: 0 auto; }
-    .event-grid { grid-template-columns: repeat(2, 1fr); }
+    .stat-strip-inner { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .msg-inner, .msg-inner.flip { grid-template-columns: 1fr; gap: 40px; direction: ltr; }
+    .msg-text { max-width: 100%; }
+    .proof-grid { grid-template-columns: repeat(2, 1fr); }
     .trust-grid { grid-template-columns: repeat(2, 1fr); }
+    .persona-visual { grid-template-columns: 1fr 1fr; }
     .footer-inner { grid-template-columns: 1fr 1fr; }
   }
   @media (max-width: 640px) {
     .nav-links { display: none; }
     .mobile-toggle { display: block; }
-    .hero { padding: 100px 20px 60px; }
-    .event-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
+    .hero { padding: 110px 20px 72px; }
+    .stat-strip-inner { grid-template-columns: 1fr; gap: 32px; }
+    .stat-block .stat-big { font-size: 56px; }
+    .proof-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
     .trust-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
-    .stat-num { font-size: 72px; }
-    .stat-num .pct { font-size: 40px; }
+    .persona-visual { grid-template-columns: 1fr; }
+    .seller-visual .seller-detail { flex-direction: column; align-items: center; }
     .footer-inner { grid-template-columns: 1fr; }
     .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
-    .cat-section { padding: 48px 20px 0; }
   }
 </style>
 </head>
@@ -175,11 +188,10 @@
       <img src="stubhub-logo.png" alt="StubHub" style="height:32px;">
     </a>
     <ul class="nav-links">
-      <li><a href="#sports">Sports</a></li>
-      <li><a href="#theatre">Theatre</a></li>
-      <li><a href="#comedy">Comedy</a></li>
-      <li><a href="#concerts">Concerts</a></li>
-      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#access">Access</a></li>
+      <li><a href="#freedom">Freedom</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#guarantee">Guarantee</a></li>
       <li><a href="https://www.stubhub.com/sell" class="nav-sell">Sell</a></li>
     </ul>
     <button class="mobile-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
@@ -189,299 +201,168 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
-    <div>
-      <div class="hero-pill">
-        <span class="hero-pill-dot"></span>
-        Affordable NYC Events
-      </div>
-      <h1>NYC events with<br>tickets under <em>$100</em></h1>
-      <div class="hero-ctas">
-        <a href="#sports" class="btn-purple">Browse Events <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></a>
-        <a href="#trust" class="btn-ghost">Our Guarantee</a>
-      </div>
+    <div class="hero-pill">
+      <span class="hero-pill-dot"></span>
+      Live events for everyone
     </div>
-    <div class="hero-stat">
-      <div class="stat-num"><span id="counter">0</span><span class="pct">%</span></div>
-      <p class="stat-desc">of events have tickets <strong>under $100</strong>*</p>
-      <div class="stat-bars">
-        <div class="stat-bar on"></div><div class="stat-bar on"></div><div class="stat-bar on"></div>
-        <div class="stat-bar on"></div><div class="stat-bar on"></div><div class="stat-bar on"></div>
-        <div class="stat-bar on"></div><div class="stat-bar on"></div><div class="stat-bar on"></div>
-        <div class="stat-bar"></div>
-      </div>
+    <h1>You shouldn't need a<br>VIP card to see <em>live</em></h1>
+    <p class="hero-sub">StubHub is for regular people who want access to live events&mdash;on their terms and on their timeline.</p>
+    <div class="hero-cta">
+      <a href="https://www.stubhub.com" class="btn-purple">Find Affordable Events <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
   </div>
 </section>
 
-
-<!-- ═══════════════════════════════════════════ -->
-<!-- SPORTS -->
-<!-- ═══════════════════════════════════════════ -->
-<section class="cat-section" id="sports">
-  <div class="cat-header reveal">
-    <div class="cat-icon sports">&#9918;</div>
-    <div class="cat-title">Sports</div>
-    <div class="cat-count">6 events with tickets under $100</div>
+<!-- STAT STRIP -->
+<div class="stat-strip">
+  <div class="stat-strip-inner">
+    <div class="stat-block reveal">
+      <div class="stat-big"><span id="counter1">0</span><span>%</span></div>
+      <div class="stat-label">of events have a ticket<br><strong>under $100</strong></div>
+    </div>
+    <div class="stat-block reveal">
+      <div class="stat-big"><span id="counter2">0</span><span>%</span></div>
+      <div class="stat-label">of events have a ticket<br><strong>under $50</strong></div>
+    </div>
+    <div class="stat-block reveal">
+      <div class="stat-big">1 in <span id="counter3">3</span></div>
+      <div class="stat-label">buyers purchase<br><strong>within 48 hours</strong> of the event</div>
+    </div>
   </div>
-  <div class="event-grid">
+</div>
 
-    <a href="https://www.stubhub.com/brooklyn-nets-brooklyn-tickets-4-5-2026/event/159054550/" target="_blank" rel="noopener" class="ev-card reveal">
-      <div class="ev-top">
-        <div class="ev-badge">Under $50</div>
-        <div class="ev-date">Sun, Apr 5 &middot; 3:30 PM</div>
-        <div class="ev-title">Brooklyn Nets vs. Washington Wizards</div>
-        <div class="ev-subtitle">Kids Day at Barclays Center</div>
-        <div class="ev-venue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Barclays Center, Brooklyn</div>
+<!-- MESSAGE 1: ACCESS -->
+<section class="msg-section" id="access">
+  <div class="msg-inner reveal">
+    <div class="msg-text">
+      <div class="msg-eyebrow">Accessible for everyone</div>
+      <h2>No presale codes.<br>No VIP credit cards.<br>Just tickets.</h2>
+      <p>We're for the fan who doesn't have a fancy credit card that gets them into a presale. The parent who wants to take their kid to their first game. The person who shouldn't need insider access just to see a show.</p>
+      <p>This isn't a luxury platform. More than 60% of events on StubHub have a ticket available for under $50.</p>
+    </div>
+    <div class="persona-visual">
+      <div class="persona-card">
+        <div class="persona-icon">&#127936;</div>
+        <h3>The first-game parent</h3>
+        <p>Take your kid to their first live game without breaking the bank.</p>
       </div>
-      <div class="ev-bottom">
-        <div class="ev-price">From<strong>$15</strong></div>
-        <div class="ev-cta">See Tickets <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      <div class="persona-card">
+        <div class="persona-icon">&#127911;</div>
+        <h3>The music fan</h3>
+        <p>Skip the presale chaos. Tickets are available on your schedule.</p>
       </div>
-    </a>
-
-    <a href="https://www.stubhub.com/new-york-mets-flushing-tickets-4-25-2026/event/159261003/" target="_blank" rel="noopener" class="ev-card reveal">
-      <div class="ev-top">
-        <div class="ev-badge">Under $50</div>
-        <div class="ev-date">Sat, Apr 25 &middot; 4:10 PM</div>
-        <div class="ev-title">New York Mets vs. Colorado Rockies</div>
-        <div class="ev-subtitle">Saturday afternoon at Citi Field</div>
-        <div class="ev-venue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Citi Field, Queens</div>
+      <div class="persona-card">
+        <div class="persona-icon">&#127775;</div>
+        <h3>The spontaneous one</h3>
+        <p>It's Saturday at 6pm and you just decided you want to go out tonight.</p>
       </div>
-      <div class="ev-bottom">
-        <div class="ev-price">From<strong>$15</strong></div>
-        <div class="ev-cta">See Tickets <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      <div class="persona-card">
+        <div class="persona-icon">&#127915;</div>
+        <h3>The plan-changer</h3>
+        <p>Plans fell through? Resell your ticket instead of eating the cost.</p>
       </div>
-    </a>
-
-    <a href="https://www.stubhub.com/new-york-mets-flushing-tickets-4-10-2026/event/159260996/" target="_blank" rel="noopener" class="ev-card reveal">
-      <div class="ev-top">
-        <div class="ev-badge">Under $50</div>
-        <div class="ev-date">Fri, Apr 10 &middot; 7:10 PM</div>
-        <div class="ev-title">New York Mets vs. Oakland Athletics</div>
-        <div class="ev-subtitle">Friday evening at Citi Field</div>
-        <div class="ev-venue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Citi Field, Queens</div>
-      </div>
-      <div class="ev-bottom">
-        <div class="ev-price">From<strong>$18</strong></div>
-        <div class="ev-cta">See Tickets <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-      </div>
-    </a>
-
-    <a href="https://www.stubhub.com/new-york-yankees-bronx-tickets-4-8-2026/event/159257394/" target="_blank" rel="noopener" class="ev-card reveal">
-      <div class="ev-top">
-        <div class="ev-badge">Under $50</div>
-        <div class="ev-date">Wed, Apr 8 &middot; 7:05 PM</div>
-        <div class="ev-title">New York Yankees vs. Oakland Athletics</div>
-        <div class="ev-subtitle">Midweek evening at Yankee Stadium</div>
-        <div class="ev-venue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Yankee Stadium, Bronx</div>
-      </div>
-      <div class="ev-bottom">
-        <div class="ev-price">From<strong>$25</strong></div>
-        <div class="ev-cta">See Tickets <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-      </div>
-    </a>
-
-    <a href="https://www.stubhub.com/new-york-yankees-bronx-tickets-4-3-2026/event/159257229/" target="_blank" rel="noopener" class="ev-card reveal">
-      <div class="ev-top">
-        <div class="ev-badge">Under $50</div>
-        <div class="ev-date">Fri, Apr 3 &middot; 1:35 PM</div>
-        <div class="ev-title">New York Yankees vs. Miami Marlins</div>
-        <div class="ev-subtitle">2026 Home Opener</div>
-        <div class="ev-venue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Yankee Stadium, Bronx</div>
-      </div>
-      <div class="ev-bottom">
-        <div class="ev-price">From<strong>$35</strong></div>
-        <div class="ev-cta">See Tickets <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-      </div>
-    </a>
-
-    <a href="https://www.stubhub.com/new-york-knicks-new-york-tickets-4-9-2026/event/159055087/" target="_blank" rel="noopener" class="ev-card reveal">
-      <div class="ev-top">
-        <div class="ev-badge">Under $100</div>
-        <div class="ev-date">Thu, Apr 9 &middot; 7:30 PM</div>
-        <div class="ev-title">New York Knicks vs. Boston Celtics</div>
-        <div class="ev-subtitle">Rivalry night at The Garden</div>
-        <div class="ev-venue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Madison Square Garden, Manhattan</div>
-      </div>
-      <div class="ev-bottom">
-        <div class="ev-price">From<strong>$75</strong></div>
-        <div class="ev-cta">See Tickets <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-      </div>
-    </a>
-
+    </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════ -->
-<!-- THEATRE -->
-<!-- ═══════════════════════════════════════════ -->
-<section class="cat-section" id="theatre">
-  <div class="cat-header reveal">
-    <div class="cat-icon theatre">&#127917;</div>
-    <div class="cat-title">Theatre</div>
-    <div class="cat-count">3 shows with tickets under $100</div>
-  </div>
-  <div class="event-grid">
-
-    <a href="https://www.stubhub.com/harry-potter-and-the-cursed-child-new-york-tickets-4-21-2026/event/158513814/" target="_blank" rel="noopener" class="ev-card reveal">
-      <div class="ev-top">
-        <div class="ev-badge">Under $100</div>
-        <div class="ev-date">Tue, Apr 21 &middot; 7:00 PM</div>
-        <div class="ev-title">Harry Potter and the Cursed Child</div>
-        <div class="ev-subtitle">Broadway &middot; The epic stage continuation</div>
-        <div class="ev-venue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Lyric Theatre, Manhattan</div>
+<!-- MESSAGE 2: FREEDOM -->
+<section class="msg-section" id="freedom">
+  <div class="msg-inner flip reveal">
+    <div class="msg-text">
+      <div class="msg-eyebrow">Your ticket, your rules</div>
+      <h2>Buy when you want.<br>Sell when plans change.</h2>
+      <p>You don't have to plan your life around someone else's on-sale schedule. 1 in 3 StubHub buyers purchase their ticket within 48 hours of the event. That's the freedom to decide on your own timeline.</p>
+      <p>And when your plans change, you shouldn't have to eat a $200 ticket. When you buy a ticket, it's yours&mdash;you can resell it, give it away, or decide at the last minute to go.</p>
+      <div class="msg-highlight">99% of StubHub's sellers are regular fans, not brokers. For Taylor Swift's Eras Tour, 83% of sellers were first-time sellers.</div>
+    </div>
+    <div class="seller-visual">
+      <div class="seller-stat">99<span>%</span></div>
+      <div class="seller-desc">of StubHub sellers are <strong>fan sellers</strong></div>
+      <div class="seller-detail">
+        <div class="seller-chip">
+          <div class="chip-num">83%</div>
+          <div class="chip-label">First-time sellers<br>on the Eras Tour</div>
+        </div>
+        <div class="seller-chip">
+          <div class="chip-num">2/3</div>
+          <div class="chip-label">of Taylor Swift sellers<br>were first-timers</div>
+        </div>
       </div>
-      <div class="ev-bottom">
-        <div class="ev-price">From<strong>$72</strong></div>
-        <div class="ev-cta">See Tickets <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-      </div>
-    </a>
-
-    <a href="https://www.stubhub.com/aladdin-the-musical-new-york-tickets-4-11-2026/event/159427939/" target="_blank" rel="noopener" class="ev-card reveal">
-      <div class="ev-top">
-        <div class="ev-badge">Under $100</div>
-        <div class="ev-date">Sat, Apr 11 &middot; 2:00 PM</div>
-        <div class="ev-title">Aladdin The Musical</div>
-        <div class="ev-subtitle">Broadway &middot; Disney's hit with the magic carpet ride</div>
-        <div class="ev-venue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> New Amsterdam Theatre, Manhattan</div>
-      </div>
-      <div class="ev-bottom">
-        <div class="ev-price">From<strong>$73</strong></div>
-        <div class="ev-cta">See Tickets <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-      </div>
-    </a>
-
-    <a href="https://www.stubhub.com/wicked-the-musical-new-york-tickets-4-4-2026/event/159240497/" target="_blank" rel="noopener" class="ev-card reveal">
-      <div class="ev-top">
-        <div class="ev-badge">Under $100</div>
-        <div class="ev-date">Sat, Apr 4 &middot; 7:00 PM</div>
-        <div class="ev-title">Wicked</div>
-        <div class="ev-subtitle">Broadway &middot; The long-running blockbuster musical</div>
-        <div class="ev-venue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Gershwin Theatre, Manhattan</div>
-      </div>
-      <div class="ev-bottom">
-        <div class="ev-price">From<strong>$89</strong></div>
-        <div class="ev-cta">See Tickets <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-      </div>
-    </a>
-
+    </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════ -->
-<!-- COMEDY -->
-<!-- ═══════════════════════════════════════════ -->
-<section class="cat-section" id="comedy">
-  <div class="cat-header reveal">
-    <div class="cat-icon comedy">&#128514;</div>
-    <div class="cat-title">Comedy</div>
-    <div class="cat-count">3 shows with tickets under $100</div>
-  </div>
-  <div class="event-grid">
+<!-- PROOF: HIGHLIGHTED EVENTS -->
+<section class="proof" id="events">
+  <div class="proof-inner">
+    <div class="proof-header reveal">
+      <h2>See what's available right now in NYC</h2>
+      <p>Real events, real prices&mdash;all under $100</p>
+    </div>
+    <div class="proof-grid">
 
-    <a href="https://www.stubhub.com/bell-house-stand-up-showcase-brooklyn-tickets-4-8-2026/event/160632666/" target="_blank" rel="noopener" class="ev-card reveal">
-      <div class="ev-top">
-        <div class="ev-badge">Under $50</div>
-        <div class="ev-date">Wed, Apr 8 &middot; 8:00 PM</div>
-        <div class="ev-title">Bell House Stand-Up Showcase</div>
-        <div class="ev-subtitle">Live comedy showcase in Gowanus</div>
-        <div class="ev-venue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> The Bell House, Brooklyn</div>
-      </div>
-      <div class="ev-bottom">
-        <div class="ev-price">From<strong>$21</strong></div>
-        <div class="ev-cta">See Tickets <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-      </div>
-    </a>
+      <a href="https://www.stubhub.com/brooklyn-nets-brooklyn-tickets-4-5-2026/event/159054550/" target="_blank" rel="noopener" class="ev-card reveal">
+        <div class="ev-top">
+          <div class="ev-badge">Under $50</div>
+          <div class="ev-date">Sun, Apr 5 &middot; 3:30 PM</div>
+          <div class="ev-title">Brooklyn Nets vs. Washington Wizards</div>
+          <div class="ev-subtitle">Kids Day at Barclays Center</div>
+          <div class="ev-venue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Barclays Center, Brooklyn</div>
+        </div>
+        <div class="ev-bottom">
+          <div class="ev-price">From<strong>$15</strong></div>
+          <div class="ev-cta">See Tickets <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        </div>
+      </a>
 
-    <a href="https://www.stubhub.com/garden-of-laughs-new-york-city-tickets-4-13-2026/event/160465120/" target="_blank" rel="noopener" class="ev-card reveal">
-      <div class="ev-top">
-        <div class="ev-badge">Under $100</div>
-        <div class="ev-date">Mon, Apr 13 &middot; 8:00 PM</div>
-        <div class="ev-title">Garden of Laughs</div>
-        <div class="ev-subtitle">John Oliver, Andrew Schulz, Iliza Shlesinger &amp; more</div>
-        <div class="ev-venue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Radio City Music Hall, Manhattan</div>
-      </div>
-      <div class="ev-bottom">
-        <div class="ev-price">From<strong>$72</strong></div>
-        <div class="ev-cta">See Tickets <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-      </div>
-    </a>
+      <a href="https://www.stubhub.com/bell-house-stand-up-showcase-brooklyn-tickets-4-8-2026/event/160632666/" target="_blank" rel="noopener" class="ev-card reveal">
+        <div class="ev-top">
+          <div class="ev-badge">Under $50</div>
+          <div class="ev-date">Wed, Apr 8 &middot; 8:00 PM</div>
+          <div class="ev-title">Bell House Stand-Up Showcase</div>
+          <div class="ev-subtitle">Live comedy in Gowanus</div>
+          <div class="ev-venue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> The Bell House, Brooklyn</div>
+        </div>
+        <div class="ev-bottom">
+          <div class="ev-price">From<strong>$21</strong></div>
+          <div class="ev-cta">See Tickets <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        </div>
+      </a>
 
-    <a href="https://www.stubhub.com/jo-koy-new-york-city-tickets-4-4-2026/event/159980261/" target="_blank" rel="noopener" class="ev-card reveal">
-      <div class="ev-top">
-        <div class="ev-badge">Under $100</div>
-        <div class="ev-date">Sat, Apr 4 &middot; 8:00 PM</div>
-        <div class="ev-title">Jo Koy: Just Being Koy Tour</div>
-        <div class="ev-subtitle">Live stand-up comedy</div>
-        <div class="ev-venue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Radio City Music Hall, Manhattan</div>
-      </div>
-      <div class="ev-bottom">
-        <div class="ev-price">From<strong>$96</strong></div>
-        <div class="ev-cta">See Tickets <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-      </div>
-    </a>
+      <a href="https://www.stubhub.com/harry-potter-and-the-cursed-child-new-york-tickets-4-21-2026/event/158513814/" target="_blank" rel="noopener" class="ev-card reveal">
+        <div class="ev-top">
+          <div class="ev-badge">Under $100</div>
+          <div class="ev-date">Tue, Apr 21 &middot; 7:00 PM</div>
+          <div class="ev-title">Harry Potter and the Cursed Child</div>
+          <div class="ev-subtitle">Broadway at Lyric Theatre</div>
+          <div class="ev-venue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Lyric Theatre, Manhattan</div>
+        </div>
+        <div class="ev-bottom">
+          <div class="ev-price">From<strong>$72</strong></div>
+          <div class="ev-cta">See Tickets <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        </div>
+      </a>
 
-  </div>
-</section>
+      <a href="https://www.stubhub.com/dave-santan-dave-brooklyn-tickets-4-30-2026/event/160035708/" target="_blank" rel="noopener" class="ev-card reveal">
+        <div class="ev-top">
+          <div class="ev-badge">Under $100</div>
+          <div class="ev-date">Thu, Apr 30 &middot; 7:00 PM</div>
+          <div class="ev-title">Dave (Santan Dave)</div>
+          <div class="ev-subtitle">The Boy Who Played the Harp Tour</div>
+          <div class="ev-venue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Brooklyn Paramount, Brooklyn</div>
+        </div>
+        <div class="ev-bottom">
+          <div class="ev-price">From<strong>$98</strong></div>
+          <div class="ev-cta">See Tickets <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        </div>
+      </a>
 
-<!-- ═══════════════════════════════════════════ -->
-<!-- CONCERTS -->
-<!-- ═══════════════════════════════════════════ -->
-<section class="cat-section" id="concerts">
-  <div class="cat-header reveal">
-    <div class="cat-icon concerts">&#127925;</div>
-    <div class="cat-title">Concerts</div>
-    <div class="cat-count">3 shows with tickets under $100</div>
-  </div>
-  <div class="event-grid">
-
-    <a href="https://www.stubhub.com/1tbsp-brooklyn-tickets-4-4-2026/event/159990353/" target="_blank" rel="noopener" class="ev-card reveal">
-      <div class="ev-top">
-        <div class="ev-badge">Under $100</div>
-        <div class="ev-date">Sat, Apr 4 &middot; 8:30 PM</div>
-        <div class="ev-title">1tbsp</div>
-        <div class="ev-subtitle">Live at Brooklyn Steel</div>
-        <div class="ev-venue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Brooklyn Steel, Brooklyn</div>
-      </div>
-      <div class="ev-bottom">
-        <div class="ev-price">From<strong>$53</strong></div>
-        <div class="ev-cta">See Tickets <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-      </div>
-    </a>
-
-    <a href="https://www.stubhub.com/rusowsky-brooklyn-tickets-4-2-2026/event/159989224/" target="_blank" rel="noopener" class="ev-card reveal">
-      <div class="ev-top">
-        <div class="ev-badge">Under $100</div>
-        <div class="ev-date">Thu, Apr 2 &middot; 8:00 PM</div>
-        <div class="ev-title">Rusowsky</div>
-        <div class="ev-subtitle">Live at Brooklyn Steel</div>
-        <div class="ev-venue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Brooklyn Steel, Brooklyn</div>
-      </div>
-      <div class="ev-bottom">
-        <div class="ev-price">From<strong>$57</strong></div>
-        <div class="ev-cta">See Tickets <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-      </div>
-    </a>
-
-    <a href="https://www.stubhub.com/dave-santan-dave-brooklyn-tickets-4-30-2026/event/160035708/" target="_blank" rel="noopener" class="ev-card reveal">
-      <div class="ev-top">
-        <div class="ev-badge">Under $100</div>
-        <div class="ev-date">Thu, Apr 30 &middot; 7:00 PM</div>
-        <div class="ev-title">Dave (Santan Dave)</div>
-        <div class="ev-subtitle">The Boy Who Played the Harp Tour</div>
-        <div class="ev-venue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Brooklyn Paramount, Brooklyn</div>
-      </div>
-      <div class="ev-bottom">
-        <div class="ev-price">From<strong>$98</strong></div>
-        <div class="ev-cta">See Tickets <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-      </div>
-    </a>
-
+    </div>
   </div>
 </section>
 
-<!-- TRUST -->
-<section class="trust" id="trust">
+<!-- TRUST / GUARANTEE -->
+<section class="trust" id="guarantee">
   <div class="trust-inner">
     <h2 class="trust-heading reveal">Every ticket is guaranteed</h2>
     <div class="trust-grid">
@@ -504,25 +385,11 @@
   </div>
 </section>
 
-<!-- FAQ -->
-<section class="faq" id="faq">
-  <h2 class="faq-heading reveal">Frequently asked questions</h2>
-  <div class="faq-item reveal">
-    <button class="faq-btn" onclick="toggleFaq(this)">Are cheap tickets legitimate?<svg class="faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
-    <div class="faq-answer"><p>Yes. Every ticket on StubHub is backed by the FanProtect guarantee. If there's ever a problem, you'll get a full refund or comparable replacement tickets.</p></div>
-  </div>
-  <div class="faq-item reveal">
-    <button class="faq-btn" onclick="toggleFaq(this)">Why are some tickets so affordable?<svg class="faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
-    <div class="faq-answer"><p>Prices are set by sellers in a live marketplace. StubHub connects you directly with ticket holders, which means you can often find great deals below face value.</p></div>
-  </div>
-  <div class="faq-item reveal">
-    <button class="faq-btn" onclick="toggleFaq(this)">Are there hidden fees at checkout?<svg class="faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
-    <div class="faq-answer"><p>StubHub offers all-in pricing. The listed price is what you pay — no surprise fees. Enable "all-in pricing" in your account settings to always see the final price.</p></div>
-  </div>
-  <div class="faq-item reveal">
-    <button class="faq-btn" onclick="toggleFaq(this)">Can I get a refund if an event is canceled?<svg class="faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
-    <div class="faq-answer"><p>Absolutely. Canceled events get automatic full refunds. Rescheduled events keep your tickets valid for the new date, or you can request a refund.</p></div>
-  </div>
+<!-- CTA BANNER -->
+<section class="cta-banner">
+  <h2 class="reveal">Live events are for everyone.</h2>
+  <p class="reveal">Stop waiting for presale codes. Find affordable tickets to events happening near you.</p>
+  <a href="https://www.stubhub.com" class="btn-purple reveal">Browse Events on StubHub <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
 </section>
 
 <!-- DISCLAIMER -->
@@ -532,10 +399,11 @@
 </div>
 
 <script>
-// Counter animation
-function animateCounter() {
-  const el = document.getElementById('counter');
-  const target = 90, duration = 1800, start = performance.now();
+// Counter animations
+function animateCounter(id, target, duration) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  const start = performance.now();
   function tick(now) {
     const p = Math.min((now - start) / duration, 1);
     el.textContent = Math.round((1 - Math.pow(1 - p, 3)) * target);
@@ -555,20 +423,19 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-// Counter trigger
-const cObs = new IntersectionObserver(e => { if (e[0].isIntersecting) { animateCounter(); cObs.disconnect(); } }, { threshold: 0.5 });
-cObs.observe(document.getElementById('counter'));
+// Counter triggers
+const cObs = new IntersectionObserver(entries => {
+  if (entries[0].isIntersecting) {
+    animateCounter('counter1', 90, 1800);
+    animateCounter('counter2', 60, 1800);
+    cObs.disconnect();
+  }
+}, { threshold: 0.5 });
+const c1 = document.getElementById('counter1');
+if (c1) cObs.observe(c1);
 
 // Nav scroll
 window.addEventListener('scroll', () => document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 10));
-
-// FAQ
-function toggleFaq(btn) {
-  const item = btn.parentElement;
-  const open = item.classList.contains('open');
-  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-  if (!open) item.classList.add('open');
-}
 </script>
 </body>
 </html>
