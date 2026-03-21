@@ -41,7 +41,7 @@
   .mobile-toggle span { display: block; width: 20px; height: 2px; background: #fff; margin: 4px 0; border-radius: 2px; }
 
   /* HERO */
-  .hero { position: relative; padding: 140px 24px 100px; background: var(--dark); overflow: hidden; text-align: center; }
+  .hero { position: relative; padding: 80px 24px 100px; background: var(--dark); overflow: hidden; text-align: center; }
   .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 50% at 50% 20%, rgba(134,71,253,0.2) 0%, transparent 70%); pointer-events: none; }
   .hero-inner { max-width: 800px; margin: 0 auto; position: relative; z-index: 2; }
   .hero-pill { display: inline-flex; align-items: center; gap: 8px; background: rgba(134,71,253,0.15); border: 1px solid rgba(134,71,253,0.3); border-radius: 100px; padding: 6px 16px 6px 10px; margin-bottom: 28px; color: var(--purple-light); font-size: 13px; font-weight: 600; animation: fadeDown 0.7s ease both; }
@@ -55,7 +55,7 @@
   .btn-purple:hover { background: #7535eb; transform: translateY(-1px); }
 
   /* STAT STRIP */
-  .stat-strip { background: var(--dark); border-top: 1px solid rgba(255,255,255,0.06); padding: 56px 24px; }
+  .stat-strip { background: var(--dark); padding: 100px 24px 0; }
   .stat-strip-inner { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; text-align: center; }
   .stat-block .stat-big { font-size: clamp(48px, 7vw, 72px); font-weight: 700; color: var(--white); line-height: 1; letter-spacing: -2px; }
   .stat-block .stat-big span { color: var(--purple-bright); }
@@ -81,7 +81,7 @@
   .proof-header { text-align: center; margin-bottom: 48px; }
   .proof-header h2 { font-size: clamp(28px, 3.5vw, 40px); font-weight: 700; color: var(--dark); letter-spacing: -0.5px; }
   .proof-header p { font-size: 17px; color: var(--gray-400); margin-top: 10px; }
-  .proof-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .proof-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 
   /* Event card */
   .ev-card { display: flex; flex-direction: column; border-radius: 12px; overflow: hidden; border: 1px solid var(--gray-200); background: var(--white); text-decoration: none; color: inherit; transition: transform 0.3s cubic-bezier(0.22,1,0.36,1), box-shadow 0.3s; }
@@ -167,7 +167,7 @@
   @media (max-width: 640px) {
     .nav-links { display: none; }
     .mobile-toggle { display: block; }
-    .hero { padding: 110px 20px 72px; }
+    .hero { padding: 60px 20px 60px; }
     .stat-strip-inner { grid-template-columns: 1fr; gap: 32px; }
     .stat-block .stat-big { font-size: 56px; }
     .proof-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
@@ -198,6 +198,24 @@
   </div>
 </nav>
 
+<!-- STAT STRIP -->
+<div class="stat-strip">
+  <div class="stat-strip-inner">
+    <div class="stat-block reveal">
+      <div class="stat-big"><span id="counter1">0</span><span>%</span></div>
+      <div class="stat-label">of events have a ticket<br><strong>under $100</strong>*</div>
+    </div>
+    <div class="stat-block reveal">
+      <div class="stat-big"><span id="counter2">0</span><span>%</span></div>
+      <div class="stat-label">of events have a ticket<br><strong>under $50</strong>*</div>
+    </div>
+    <div class="stat-block reveal">
+      <div class="stat-big">1 in <span id="counter3">3</span></div>
+      <div class="stat-label">buyers purchase<br><strong>within 48 hours</strong> of the event*</div>
+    </div>
+  </div>
+</div>
+
 <!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
@@ -208,28 +226,10 @@
     <h1>You shouldn't need a<br>VIP card to see <em>live</em></h1>
     <p class="hero-sub">StubHub is for regular people who want access to live events&mdash;on their terms and on their timeline.</p>
     <div class="hero-cta">
-      <a href="https://www.stubhub.com" class="btn-purple">Find Affordable Events <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <a href="#events" class="btn-purple">Find Affordable Events <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></a>
     </div>
   </div>
 </section>
-
-<!-- STAT STRIP -->
-<div class="stat-strip">
-  <div class="stat-strip-inner">
-    <div class="stat-block reveal">
-      <div class="stat-big"><span id="counter1">0</span><span>%</span></div>
-      <div class="stat-label">of events have a ticket<br><strong>under $100</strong></div>
-    </div>
-    <div class="stat-block reveal">
-      <div class="stat-big"><span id="counter2">0</span><span>%</span></div>
-      <div class="stat-label">of events have a ticket<br><strong>under $50</strong></div>
-    </div>
-    <div class="stat-block reveal">
-      <div class="stat-big">1 in <span id="counter3">3</span></div>
-      <div class="stat-label">buyers purchase<br><strong>within 48 hours</strong> of the event</div>
-    </div>
-  </div>
-</div>
 
 <!-- MESSAGE 1: ACCESS -->
 <section class="msg-section" id="access">
@@ -297,7 +297,6 @@
   <div class="proof-inner">
     <div class="proof-header reveal">
       <h2>See what's available right now in NYC</h2>
-      <p>Real events, real prices&mdash;all under $100</p>
     </div>
     <div class="proof-grid">
 
@@ -310,7 +309,7 @@
           <div class="ev-venue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Barclays Center, Brooklyn</div>
         </div>
         <div class="ev-bottom">
-          <div class="ev-price">From<strong>$15</strong></div>
+          <div class="ev-price">As low as<strong>$15</strong></div>
           <div class="ev-cta">See Tickets <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
         </div>
       </a>
@@ -324,35 +323,63 @@
           <div class="ev-venue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> The Bell House, Brooklyn</div>
         </div>
         <div class="ev-bottom">
-          <div class="ev-price">From<strong>$21</strong></div>
+          <div class="ev-price">As low as<strong>$21</strong></div>
           <div class="ev-cta">See Tickets <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
         </div>
       </a>
 
-      <a href="https://www.stubhub.com/harry-potter-and-the-cursed-child-new-york-tickets-4-21-2026/event/158513814/" target="_blank" rel="noopener" class="ev-card reveal">
+      <a href="https://www.stubhub.com/new-york-yankees-bronx-tickets-4-18-2026/event/159257401/" target="_blank" rel="noopener" class="ev-card reveal">
         <div class="ev-top">
-          <div class="ev-badge">Under $100</div>
-          <div class="ev-date">Tue, Apr 21 &middot; 7:00 PM</div>
-          <div class="ev-title">Harry Potter and the Cursed Child</div>
-          <div class="ev-subtitle">Broadway at Lyric Theatre</div>
-          <div class="ev-venue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Lyric Theatre, Manhattan</div>
+          <div class="ev-badge">Under $50</div>
+          <div class="ev-date">Sat, Apr 18 &middot; 1:35 PM</div>
+          <div class="ev-title">New York Yankees vs. Kansas City Royals</div>
+          <div class="ev-subtitle">Saturday afternoon at Yankee Stadium</div>
+          <div class="ev-venue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Yankee Stadium, Bronx</div>
         </div>
         <div class="ev-bottom">
-          <div class="ev-price">From<strong>$72</strong></div>
+          <div class="ev-price">As low as<strong>$15</strong></div>
           <div class="ev-cta">See Tickets <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
         </div>
       </a>
 
-      <a href="https://www.stubhub.com/dave-santan-dave-brooklyn-tickets-4-30-2026/event/160035708/" target="_blank" rel="noopener" class="ev-card reveal">
+      <a href="https://www.stubhub.com/new-york-mets-flushing-tickets-4-21-2026/event/159260999/" target="_blank" rel="noopener" class="ev-card reveal">
         <div class="ev-top">
-          <div class="ev-badge">Under $100</div>
-          <div class="ev-date">Thu, Apr 30 &middot; 7:00 PM</div>
-          <div class="ev-title">Dave (Santan Dave)</div>
-          <div class="ev-subtitle">The Boy Who Played the Harp Tour</div>
-          <div class="ev-venue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Brooklyn Paramount, Brooklyn</div>
+          <div class="ev-badge">Under $50</div>
+          <div class="ev-date">Tue, Apr 21 &middot; 7:10 PM</div>
+          <div class="ev-title">New York Mets vs. Minnesota Twins</div>
+          <div class="ev-subtitle">Tuesday evening at Citi Field</div>
+          <div class="ev-venue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Citi Field, Queens</div>
         </div>
         <div class="ev-bottom">
-          <div class="ev-price">From<strong>$98</strong></div>
+          <div class="ev-price">As low as<strong>$9</strong></div>
+          <div class="ev-cta">See Tickets <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        </div>
+      </a>
+
+      <a href="https://www.stubhub.com/ddg-new-york-tickets-4-26-2026/event/160718456/" target="_blank" rel="noopener" class="ev-card reveal">
+        <div class="ev-top">
+          <div class="ev-badge">Under $50</div>
+          <div class="ev-date">Sun, Apr 26 &middot; 8:00 PM</div>
+          <div class="ev-title">DDG: Blame The Chat Tour</div>
+          <div class="ev-subtitle">Live at Gramercy Theatre</div>
+          <div class="ev-venue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Gramercy Theatre, Manhattan</div>
+        </div>
+        <div class="ev-bottom">
+          <div class="ev-price">As low as<strong>$36</strong></div>
+          <div class="ev-cta">See Tickets <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        </div>
+      </a>
+
+      <a href="https://www.stubhub.com/new-york-mets-flushing-tickets-4-25-2026/event/159261003/" target="_blank" rel="noopener" class="ev-card reveal">
+        <div class="ev-top">
+          <div class="ev-badge">Under $50</div>
+          <div class="ev-date">Sat, Apr 25 &middot; 4:10 PM</div>
+          <div class="ev-title">New York Mets vs. Colorado Rockies</div>
+          <div class="ev-subtitle">Saturday afternoon at Citi Field</div>
+          <div class="ev-venue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Citi Field, Queens</div>
+        </div>
+        <div class="ev-bottom">
+          <div class="ev-price">As low as<strong>$15</strong></div>
           <div class="ev-cta">See Tickets <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
         </div>
       </a>
